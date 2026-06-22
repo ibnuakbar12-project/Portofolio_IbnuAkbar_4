@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ibnu Akbar — Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── Floating Orb Backgrounds ── -->
+  <div class="orbs" aria-hidden="true">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       NAVBAR
+       ══════════════════════════════════════ -->
+  <nav class="navbar">
+    <a href="#" onclick="navigateTo('home'); return false;" class="nav-logo">
+      <div class="nav-logo-icon">
+        <i class="fas fa-futbol" style="color:white; font-size:1rem;"></i>
+      </div>
+      <span style="color:inherit;">IB<span id="logo-accent">NU</span></span>
+    </a>
+
+    <div class="nav-links">
+      <button class="nav-btn" data-page="home"       onclick="navigateTo('home')">
+        <i class="fas fa-house" style="margin-right:7px;font-size:.8rem;"></i>Home
+      </button>
+      <button class="nav-btn" data-page="pengalaman" onclick="navigateTo('pengalaman')">
+        <i class="fas fa-briefcase" style="margin-right:7px;font-size:.8rem;"></i>Pengalaman
+      </button>
+      <button class="nav-btn" data-page="gallery"    onclick="navigateTo('gallery')">
+        <i class="fas fa-images" style="margin-right:7px;font-size:.8rem;"></i>Gallery
+      </button>
+      <button class="nav-btn" data-page="socials"    onclick="navigateTo('socials')">
+        <i class="fas fa-paper-plane" style="margin-right:7px;font-size:.8rem;"></i>Socials
+      </button>
+    </div>
+
+    <button class="nav-hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button onclick="navigateTo('home')"><i class="fas fa-house" style="margin-right:10px;"></i>Home</button>
+    <button onclick="navigateTo('pengalaman')"><i class="fas fa-briefcase" style="margin-right:10px;"></i>Pengalaman</button>
+    <button onclick="navigateTo('gallery')"><i class="fas fa-images" style="margin-right:10px;"></i>Gallery</button>
+    <button onclick="navigateTo('socials')"><i class="fas fa-paper-plane" style="margin-right:10px;"></i>Socials</button>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       HOME PAGE  ☀️ Warm Sunrise
+       ══════════════════════════════════════ -->
+  <div id="home-page" class="page">
+    <div class="container">
+
+      <!-- Hero -->
+      <div class="home-hero">
+        <!-- Left: Text Content -->
+        <div class="hero-text-content">
+          <div class="home-badge">
+            <span class="badge-dot"></span>
+            Mahasiswa Semester 2 · TRPL
+          </div>
+
+          <h1 class="home-title">
+            Muhammad Ibnu
+            <span class="gradient-text">Akbar</span>
+          </h1>
+
+          <p class="home-subtitle">
+            <i class="fas fa-map-marker-alt" style="margin-right:6px;"></i>
+            Teknologi Rekayasa Perangkat Lunak
+          </p>
+
+          <p class="home-desc">
+            Menghubungkan logika <strong style="color:#f97316;">coding</strong> dan kreativitas
+            <strong style="color:#0ea5e9;">digital</strong> untuk produk fungsional dengan UX yang luar biasa.
+            Saat ini saya berfokus di
+            <span id="typewriter" style="color:#ec4899;font-weight:600;border-right:2px solid #ec4899;padding-right:2px;"></span>
+          </p>
+
+          <div class="home-tags">
+            <span class="tag tag-blue"><i class="fab fa-python"></i> Python</span>
+            <span class="tag tag-orange"><i class="fab fa-figma"></i> Figma</span>
+            <span class="tag tag-green"><i class="fas fa-database"></i> MySQL</span>
+          </div>
+
+          <div class="home-btns">
+            <button class="btn-primary" onclick="navigateTo('pengalaman')">
+              <span><i class="fas fa-eye" style="margin-right:8px;"></i>Lihat Pengalaman</span>
+            </button>
+            <button class="btn-secondary" onclick="navigateTo('socials')">
+              <i class="fas fa-paper-plane" style="margin-right:8px;color:#ec4899;"></i>Hubungi Saya
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Modern Tech Animation -->
+        <div class="hero-visual">
+          <div class="hero-aura"></div>
+          
+          <!-- Modern Tech Animation -->
+          <div class="tech-animation">
+            <!-- Center Circle -->
+            <div class="tech-center">
+              <div class="center-ring"></div>
+              <i class="fas fa-code" style="font-size:2.5rem;color:#f97316;"></i>
+            </div>
+            
+            <!-- Orbiting Tech Icons -->
+            <div class="orbit orbit-1">
+              <div class="tech-icon"><i class="fab fa-python" style="color:#3b82f6;"></i></div>
+            </div>
+            <div class="orbit orbit-2">
+              <div class="tech-icon"><i class="fab fa-js" style="color:#eab308;"></i></div>
+            </div>
+            <div class="orbit orbit-3">
+              <div class="tech-icon"><i class="fas fa-database" style="color:#10b981;"></i></div>
+            </div>
+            <div class="orbit orbit-4">
+              <div class="tech-icon"><i class="fab fa-html5" style="color:#f97316;"></i></div>
+            </div>
+            <div class="orbit orbit-5">
+              <div class="tech-icon"><i class="fab fa-css3-alt" style="color:#0ea5e9;"></i></div>
+            </div>
+            
+            <!-- Floating Code Elements -->
+            <div class="code-float code-1" style="top:15%;left:5%;">&lt;/&gt;</div>
+            <div class="code-float code-2" style="top:25%;right:8%;">{ }</div>
+            <div class="code-float code-3" style="bottom:20%;left:10%;">[ ]</div>
+            <div class="code-float code-4" style="bottom:15%;right:5%;">;</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Pribadi Section -->
+      <div class="reveal" style="margin-top:60px;">
+        <h2 class="section-title" style="color:#1c1917;">
+          <i class="fas fa-id-card" style="color:#f97316;margin-right:10px;"></i>Data Pribadi
+        </h2>
+        <div style="background:linear-gradient(135deg,rgba(249,115,22,0.08),rgba(236,72,153,0.08));border:1px solid rgba(249,115,22,0.2);border-radius:16px;padding:28px 32px;display:flex;flex-wrap:wrap;gap:24px;">
+          <div style="display:flex;align-items:center;gap:14px;min-width:200px;">
+            <div style="width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#f97316,#ec4899);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <i class="fas fa-user" style="color:white;font-size:.9rem;"></i>
+            </div>
+            <div>
+              <p style="font-size:.72rem;color:#78716c;margin:0 0 2px;">Nama Panggilan</p>
+              <p style="font-weight:700;color:#1c1917;margin:0;font-size:.95rem;">Ibnu / Akbar</p>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;min-width:260px;">
+            <div style="width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#a855f7,#6366f1);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <i class="fas fa-cake-candles" style="color:white;font-size:.9rem;"></i>
+            </div>
+            <div>
+              <p style="font-size:.72rem;color:#78716c;margin:0 0 2px;">Tempat, Tanggal Lahir</p>
+              <p style="font-weight:700;color:#1c1917;margin:0;font-size:.95rem;">Bandar Lampung, 22 Juli 2007</p>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;min-width:260px;">
+            <div style="width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#f43f5e,#f97316);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <i class="fas fa-futbol" style="color:white;font-size:.9rem;"></i>
+            </div>
+            <div>
+              <p style="font-size:.72rem;color:#78716c;margin:0 0 2px;">Hobi</p>
+              <p style="font-weight:700;color:#1c1917;margin:0;font-size:.95rem;">Futsal · Badminton · Sepak Bola</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pendidikan Section -->
+      <div class="reveal" style="margin-top:48px;">
+        <h2 class="section-title" style="color:#1c1917;">
+          <i class="fas fa-graduation-cap" style="color:#f97316;margin-right:10px;"></i>Riwayat Pendidikan
+        </h2>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+
+          <!-- IPB -->
+          <div style="background:linear-gradient(135deg,rgba(16,185,129,0.07),rgba(14,165,233,0.07));border:1px solid rgba(16,185,129,0.25);border-left:4px solid #10b981;border-radius:14px;padding:20px 24px;">
+            <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:flex-start;">
+              <div>
+                <h3 style="margin:0 0 3px;font-size:.97rem;font-weight:700;color:#1c1917;">Institut Pertanian Bogor (IPB University)</h3>
+                <p style="margin:0;font-size:.82rem;color:#059669;font-weight:600;">D4 Teknologi Rekayasa Perangkat Lunak</p>
+              </div>
+              <span style="background:rgba(16,185,129,0.12);color:#059669;border:1px solid rgba(5,150,105,0.3);border-radius:20px;padding:4px 12px;font-size:.74rem;font-weight:600;white-space:nowrap;">Sep 2025 – Sekarang</span>
+            </div>
+          </div>
+
+          <!-- SMA -->
+          <div style="background:linear-gradient(135deg,rgba(99,102,241,0.07),rgba(168,85,247,0.07));border:1px solid rgba(99,102,241,0.25);border-left:4px solid #6366f1;border-radius:14px;padding:20px 24px;">
+            <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:flex-start;margin-bottom:12px;">
+              <div>
+                <h3 style="margin:0 0 3px;font-size:.97rem;font-weight:700;color:#1c1917;">SMA Negeri 3 Kota Pagar Alam</h3>
+                <p style="margin:0;font-size:.82rem;color:#6366f1;font-weight:600;">Sains / MIPA</p>
+              </div>
+              <span style="background:rgba(99,102,241,0.12);color:#6366f1;border:1px solid rgba(99,102,241,0.3);border-radius:20px;padding:4px 12px;font-size:.74rem;font-weight:600;white-space:nowrap;">Jul 2022 – Mei 2025</span>
+            </div>
+            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px;">
+              <li style="font-size:.82rem;color:#44403c;">Peserta Jambore Nasional (2022)</li>
+              <li style="font-size:.82rem;color:#44403c;">Peserta Raimuna Cabang Kota Pagar Alam (2023)</li>
+              <li style="font-size:.82rem;color:#92400e;">🥇 Juara 1 LCC Keluarga Sadar Hukum tingkat Kota (2022 &amp; 2023)</li>
+              <li style="font-size:.82rem;color:#92400e;">🥇 Juara 1 Lomba Design Logo Kampus UNILED tingkat Provinsi (2022)</li>
+              <li style="font-size:.82rem;color:#4c1d95;">🥈 Juara 2 Lomba Design Poster tingkat Provinsi (2024)</li>
+              <li style="font-size:.82rem;color:#7c2d12;">🥉 Juara 3 Turnamen Futsal STIT CUP (2025)</li>
+              <li style="font-size:.82rem;color:#7c2d12;">🥉 Juara 3 Turnamen Futsal 21 CUP (2024)</li>
+            </ul>
+          </div>
+
+          <!-- SMP -->
+          <div style="background:linear-gradient(135deg,rgba(245,158,11,0.07),rgba(249,115,22,0.07));border:1px solid rgba(245,158,11,0.25);border-left:4px solid #f59e0b;border-radius:14px;padding:20px 24px;">
+            <div style="margin-bottom:10px;">
+              <h3 style="margin:0 0 3px;font-size:.97rem;font-weight:700;color:#1c1917;">SMP Negeri 2 Kota Pagar Alam</h3>
+            </div>
+            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px;">
+              <li style="font-size:.82rem;color:#44403c;">Peserta Jambore Daerah Sumatera Selatan (2021)</li>
+              <li style="font-size:.82rem;color:#4c1d95;">🥈 Juara 2 Lomba PILDACIL Ganesha Operation (2021)</li>
+            </ul>
+          </div>
+
+          <!-- SD -->
+          <div style="background:linear-gradient(135deg,rgba(244,63,94,0.07),rgba(251,113,133,0.07));border:1px solid rgba(244,63,94,0.25);border-left:4px solid #f43f5e;border-radius:14px;padding:20px 24px;">
+            <div style="margin-bottom:10px;">
+              <h3 style="margin:0 0 3px;font-size:.97rem;font-weight:700;color:#1c1917;">SD Negeri 29 Kota Pagar Alam</h3>
+            </div>
+            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px;">
+              <li style="font-size:.82rem;color:#4c1d95;">🥈 Juara 2 Lomba PILDACIL Ganesha Operation (2017)</li>
+              <li style="font-size:.82rem;color:#4c1d95;">🥈 Juara 2 Lomba Baca Puisi Tema "Alam" (2017)</li>
+              <li style="font-size:.82rem;color:#7c2d12;">🥉 Juara 3 O2SN Cabor Bulu Tangkis Tingkat Kota (2018)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Stack -->
+      <div class="home-stack">
+        <h2 class="section-title" style="color:#1c1917;">
+          <i class="fas fa-layer-group" style="color:#f97316;margin-right:10px;"></i>Tech Stack
+        </h2>
+        <div class="stack-grid">
+          <div class="stack-card" data-tech="figma">
+            <i class="fab fa-figma" style="color:#f24e1e;"></i>
+            <p>Figma</p>
+          </div>
+          <div class="stack-card" data-tech="python">
+            <i class="fab fa-python" style="color:#3b82f6;"></i>
+            <p>Python</p>
+          </div>
+          <div class="stack-card" data-tech="html">
+            <i class="fab fa-html5" style="color:#f97316;"></i>
+            <p>HTML5</p>
+          </div>
+          <div class="stack-card" data-tech="css">
+            <i class="fab fa-css3-alt" style="color:#0ea5e9;"></i>
+            <p>CSS3</p>
+          </div>
+          <div class="stack-card" data-tech="javascript">
+            <i class="fab fa-js" style="color:#eab308;"></i>
+            <p>JavaScript</p>
+          </div>
+          <div class="stack-card" data-tech="json">
+            <i class="fas fa-code" style="color:#10b981;"></i>
+            <p>JSON</p>
+          </div>
+          <div class="stack-card" data-tech="mysql">
+            <i class="fas fa-database" style="color:#2563eb;"></i>
+            <p>MySQL</p>
+          </div>
+          <div class="stack-card" data-tech="rstudio">
+            <i class="fas fa-chart-bar" style="color:#1e40af;"></i>
+            <p>R Studio</p>
+          </div>
+        </div>
+      </div>
+
+        </div>
+      </div>
+
+        </div>
+      </div>
+
+    </div><!-- /container -->
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span class="footer-text">© 2025 Muhammad Ibnu Akbar. All rights reserved.</span>
+        <span class="footer-text" style="color:#f97316;font-weight:600;">
+          <i class="fas fa-futbol" style="margin-right:6px;"></i>Full Stack Dreamer
+        </span>
+      </div>
+    </footer>
+  </div><!-- /home-page -->
+
+
+  <!-- ══════════════════════════════════════
+       PENGALAMAN PAGE  ⚡ Electric Teal
+       ══════════════════════════════════════ -->
+  <div id="pengalaman-page" class="page">
+    <div class="container">
+
+      <div class="exp-header">
+        <div class="exp-badge">
+          <i class="fas fa-folder-open"></i> Portofolio
+        </div>
+        <h1 class="exp-title">Pengalaman & Proyek</h1>
+        <p class="exp-desc">Deretan proyek dan pencapaian yang telah saya kerjakan dengan penuh dedikasi.</p>
+      </div>
+
+      <!-- Category 1: Software & Web Dev -->
+      <div class="exp-category">
+        <h2 class="exp-cat-title">
+          <span class="cat-icon" style="background:linear-gradient(135deg,#06b6d4,#0ea5e9);">
+            <i class="fas fa-laptop-code"></i>
+          </span>
+          Software & Web Development
+        </h2>
+        <div class="exp-grid">
+
+          <!-- TS KOST -->
+        <a href="https://tskost.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="exp-link-card">
+          <div class="exp-card" style="--card-from:#065f46;--card-to:#0d9488;">
+            <div class="exp-card-top" style="background:linear-gradient(135deg,#10b981,#0d9488);">
+                <i class="fas fa-house-laptop"></i>
+                <span class="click-badge">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                  Klik untuk Buka
+                </span>
+              <div style="position:absolute;bottom:0;right:0;width:90px;height:90px;background:rgba(255,255,255,0.1);border-radius:50%;transform:translate(30%,30%);"></div>
+            </div>
+            <div class="exp-card-body">
+              <h3>TS KOST Website</h3>
+              <p>Membuat dan melakukan hosting website untuk mitra kost. Full deployment dengan domain custom.</p>
+              <span class="exp-chip" style="background:rgba(16,185,129,0.15);color:#34d399;border:1px solid rgba(52,211,153,0.3);">
+                <i class="fas fa-circle-check" style="font-size:.7rem;"></i> Live & Online
+              </span>
+            </div>
+          </div>
+        </a>
+          <!-- Bank Mutation -->
+          <div class="exp-card">
+            <div class="exp-card-top" style="background:linear-gradient(135deg,#0ea5e9,#2563eb);">
+              <i class="fas fa-building-columns"></i>
+              <div style="position:absolute;bottom:0;right:0;width:90px;height:90px;background:rgba(255,255,255,0.1);border-radius:50%;transform:translate(30%,30%);"></div>
+            </div>
+            <div class="exp-card-body">
+              <h3>Bank Mutation System</h3>
+              <p>Aplikasi Python simulasi sistem mutasi rekening bank dengan logika transaksi lengkap.</p>
+              <span class="exp-chip" style="background:rgba(6,182,212,0.15);color:#22d3ee;border:1px solid rgba(34,211,238,0.3);">
+                <i class="fas fa-circle-check" style="font-size:.7rem;"></i> Logic Success
+              </span>
+            </div>
+          </div>
+
+          <!-- Calorie Calculator -->
+          <div class="exp-card">
+            <div class="exp-card-top" style="background:linear-gradient(135deg,#f43f5e,#e11d48);">
+              <i class="fas fa-apple-whole"></i>
+              <div style="position:absolute;bottom:0;right:0;width:90px;height:90px;background:rgba(255,255,255,0.1);border-radius:50%;transform:translate(30%,30%);"></div>
+            </div>
+            <div class="exp-card-body">
+              <h3>Calorie Calculator</h3>
+              <p>Aplikasi kalkulator kalori dengan input BMI dan rekomendasi diet harian yang user-friendly.</p>
+              <span class="exp-chip" style="background:rgba(244,63,94,0.15);color:#fb7185;border:1px solid rgba(251,113,133,0.3);">
+                <i class="fas fa-circle-check" style="font-size:.7rem;"></i> User Friendly
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Category 2: Design -->
+      <div class="exp-category">
+        <h2 class="exp-cat-title">
+          <span class="cat-icon" style="background:linear-gradient(135deg,#f59e0b,#f97316);">
+            <i class="fas fa-palette"></i>
+          </span>
+          UI/UX & Graphic Design
+        </h2>
+        <div class="exp-grid">
+
+          <!-- Logo Champion -->
+          <div class="exp-card">
+            <div class="exp-card-top" style="background:linear-gradient(135deg,#f59e0b,#f97316);">
+              <i class="fas fa-trophy"></i>
+              <div style="position:absolute;top:10px;right:14px;font-size:2rem;">🏆</div>
+            </div>
+            <div class="exp-card-body">
+              <h3>Juara 1 — Logo Kampus</h3>
+              <p>Memenangkan kompetisi desain logo identitas kampus tingkat internal.</p>
+              <span class="exp-chip" style="background:rgba(245,158,11,0.15);color:#fbbf24;border:1px solid rgba(251,191,36,0.3);">
+                <i class="fas fa-crown" style="font-size:.7rem;"></i> CHAMPION
+              </span>
+            </div>
+          </div>
+
+          <!-- Poster Runner Up -->
+          <div class="exp-card">
+            <div class="exp-card-top" style="background:linear-gradient(135deg,#818cf8,#6366f1);">
+              <i class="fas fa-scroll"></i>
+              <div style="position:absolute;top:10px;right:14px;font-size:2rem;">🥈</div>
+            </div>
+            <div class="exp-card-body">
+              <h3>Juara 2 — Poster Digital</h3>
+              <p>Runner up kontes desain poster digital tingkat nasional.</p>
+              <span class="exp-chip" style="background:rgba(129,140,248,0.15);color:#a5b4fc;border:1px solid rgba(165,180,252,0.3);">
+                <i class="fas fa-medal" style="font-size:.7rem;"></i> RUNNER UP
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Category 3: Social Media -->
+      <div class="exp-category" style="padding-bottom:60px;">
+        <h2 class="exp-cat-title">
+          <span class="cat-icon" style="background:linear-gradient(135deg,#ec4899,#f43f5e);">
+            <i class="fas fa-bullhorn"></i>
+          </span>
+          Digital Branding & Social Media
+        </h2>
+        <div class="exp-grid">
+
+          <!-- OSIS Sekolah -->
+          <div class="exp-card">
+            <div class="exp-card-top" style="background:linear-gradient(135deg,#ec4899,#db2777);">
+              <i class="fab fa-instagram"></i>
+            </div>
+            <div class="exp-card-body">
+              <h3>Admin IG OSIS Sekolah</h3>
+              <p>Mengelola akun Instagram OSIS sekolah selama 2 tahun, meningkatkan engagement dan follower.</p>
+              <span class="exp-chip" style="background:rgba(236,72,153,0.15);color:#f9a8d4;border:1px solid rgba(249,168,212,0.3);">
+                <i class="fas fa-arrow-trend-up" style="font-size:.7rem;"></i> Engagement +
+              </span>
+            </div>
+          </div>
+
+          <!-- OSIS Provinsi -->
+          <div class="exp-card">
+            <div class="exp-card-top" style="background:linear-gradient(135deg,#a855f7,#7c3aed);">
+              <i class="fab fa-instagram"></i>
+            </div>
+            <div class="exp-card-body">
+              <h3>Admin IG Forum OSIS Prov. SLS</h3>
+              <p>Memimpin divisi digital Forum OSIS Sumatera Selatan, koordinasi konten multi-kota.</p>
+              <span class="exp-chip" style="background:rgba(168,85,247,0.15);color:#c4b5fd;border:1px solid rgba(196,181,253,0.3);">
+                <i class="fas fa-star" style="font-size:.7rem;"></i> Leader
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Category 4: Pengalaman Organisasi -->
+      <div class="exp-category" style="padding-bottom:60px;">
+        <h2 class="exp-cat-title">
+          <span class="cat-icon" style="background:linear-gradient(135deg,#f43f5e,#a855f7);">
+            <i class="fas fa-users"></i>
+          </span>
+          Pengalaman Organisasi
+        </h2>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+
+          <!-- IKAMUSI -->
+          <div class="exp-card" style="--card-from:#0c4a6e;--card-to:#1e40af;display:block;padding:0;overflow:hidden;">
+            <div style="background:linear-gradient(135deg,#0ea5e9,#6366f1);padding:18px 22px;position:relative;">
+              <i class="fas fa-star" style="position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:2rem;opacity:0.15;color:white;"></i>
+              <h3 style="margin:0 0 3px;font-size:1rem;font-weight:700;color:white;">IKAMUSI IPB University</h3>
+              <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;">
+                <p style="margin:0;font-size:.82rem;color:#bae6fd;font-weight:600;">Ketua Angkatan</p>
+                <span style="background:rgba(255,255,255,0.15);color:white;border-radius:20px;padding:3px 10px;font-size:.74rem;font-weight:600;">Sep 2025 – Sekarang</span>
+              </div>
+            </div>
+            <div style="padding:16px 22px;">
+              <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;">
+                <li style="font-size:.83rem;color:#cbd5e1;">Memimpin dan mengoordinasikan ratusan mahasiswa baru asal Sumatera Selatan di IPB University untuk memastikan proses adaptasi kampus berjalan lancar.</li>
+                <li style="font-size:.83rem;color:#cbd5e1;">Menjadi jembatan komunikasi aktif antara pengurus pusat (Kampus Dramaga) dan anggota di Kampus Kota guna menyelaraskan program kerja organisasi.</li>
+                <li style="font-size:.83rem;color:#cbd5e1;">Mengoordinasikan agenda keakraban angkatan serta membantu Ketua Umum dalam menjaring SDM untuk kepanitiaan acara.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Forum OSIS Sumsel -->
+          <div class="exp-card" style="--card-from:#4a1d96;--card-to:#7c3aed;display:block;padding:0;overflow:hidden;">
+            <div style="background:linear-gradient(135deg,#a855f7,#ec4899);padding:18px 22px;position:relative;">
+              <i class="fas fa-wifi" style="position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:2rem;opacity:0.15;color:white;"></i>
+              <h3 style="margin:0 0 3px;font-size:1rem;font-weight:700;color:white;">Forum OSIS Sumatera Selatan</h3>
+              <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;">
+                <p style="margin:0;font-size:.82rem;color:#f5d0fe;font-weight:600;">Ketua Divisi KOMINFO</p>
+                <span style="background:rgba(255,255,255,0.15);color:white;border-radius:20px;padding:3px 10px;font-size:.74rem;font-weight:600;">Jul 2023 – Jul 2024</span>
+              </div>
+            </div>
+            <div style="padding:16px 22px;">
+              <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;">
+                <li style="font-size:.83rem;color:#cbd5e1;">Memimpin dan mengawasi kinerja divisi KOMINFO tingkat provinsi dalam mengelola saluran komunikasi resmi organisasi.</li>
+                <li style="font-size:.83rem;color:#cbd5e1;">Mengorkestrasi pembuatan konten digital dan publikasi kreatif untuk meningkatkan keterlibatan pengurus OSIS se-Sumatera Selatan.</li>
+                <li style="font-size:.83rem;color:#cbd5e1;">Bertanggung jawab penuh atas penyebaran informasi strategis dan menjaga kelancaran birokrasi komunikasi antar-pengurus.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Forum OSIS Kota -->
+          <div class="exp-card" style="--card-from:#064e3b;--card-to:#0d9488;display:block;padding:0;overflow:hidden;">
+            <div style="background:linear-gradient(135deg,#10b981,#06b6d4);padding:18px 22px;position:relative;">
+              <i class="fas fa-wallet" style="position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:2rem;opacity:0.15;color:white;"></i>
+              <h3 style="margin:0 0 3px;font-size:1rem;font-weight:700;color:white;">Forum OSIS Kota Pagar Alam</h3>
+              <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;">
+                <p style="margin:0;font-size:.82rem;color:#a7f3d0;font-weight:600;">Bendahara Umum</p>
+                <span style="background:rgba(255,255,255,0.15);color:white;border-radius:20px;padding:3px 10px;font-size:.74rem;font-weight:600;">Jan 2023 – Mei 2025</span>
+              </div>
+            </div>
+            <div style="padding:16px 22px;">
+              <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;">
+                <li style="font-size:.83rem;color:#cbd5e1;">Mengelola arus kas masuk dan keluar keuangan organisasi secara transparan serta menyusun laporan keuangan bulanan.</li>
+                <li style="font-size:.83rem;color:#cbd5e1;">Menyusun Rancangan Anggaran Biaya (RAB) yang taktis dan efisien untuk mendukung kesuksesan berbagai acara kepemudaan skala kota.</li>
+                <li style="font-size:.83rem;color:#cbd5e1;">Mengawasi alokasi dana internal guna memastikan stabilitas finansial organisasi selama periode kepengurusan.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- OSIS Sekolah -->
+          <div class="exp-card" style="--card-from:#78350f;--card-to:#b45309;display:block;padding:0;overflow:hidden;">
+            <div style="background:linear-gradient(135deg,#f59e0b,#f97316);padding:18px 22px;position:relative;">
+              <i class="fas fa-crown" style="position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:2rem;opacity:0.15;color:white;"></i>
+              <h3 style="margin:0 0 3px;font-size:1rem;font-weight:700;color:white;">OSIS SMA Negeri 3 Kota Pagar Alam</h3>
+              <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;">
+                <p style="margin:0;font-size:.82rem;color:#fef3c7;font-weight:600;">Ketua OSIS</p>
+                <span style="background:rgba(255,255,255,0.15);color:white;border-radius:20px;padding:3px 10px;font-size:.74rem;font-weight:600;">Sep 2022 – Nov 2023</span>
+              </div>
+            </div>
+            <div style="padding:16px 22px;">
+              <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;">
+                <li style="font-size:.83rem;color:#cbd5e1;">Mengukir pencapaian sebagai siswa kelas 10 pertama yang dipercaya memimpin OSIS melalui proses pemilihan demokratis.</li>
+                <li style="font-size:.83rem;color:#cbd5e1;">Mengoordinasikan seluruh perwakilan kelas dan mengeksekusi kembali program kerja strategis yang sempat tertunda guna menyalurkan minat bakat siswa.</li>
+                <li style="font-size:.83rem;color:#cbd5e1;">Menginisiasi pembentukan lembaga Majelis Perwakilan Kelas (MPK) dari nol untuk memperkuat sistem pengawasan di sekolah.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- /container -->
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span class="footer-text" style="color:#475569;">© 2025 Muhammad Ibnu Akbar</span>
+        <span style="color:#06b6d4;font-size:.82rem;font-weight:600;">
+          <i class="fas fa-code" style="margin-right:6px;"></i>Built with Passion
+        </span>
+      </div>
+    </footer>
+  </div><!-- /pengalaman-page -->
+
+
+  <!-- ══════════════════════════════════════
+       GALLERY PAGE  🌌 Neon Midnight
+       ══════════════════════════════════════ -->
+  <div id="gallery-page" class="page">
+    <!-- Floating particles container -->
+    <div id="gallery-particles" style="position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;"></div>
+
+    <div class="container">
+
+      <div class="gal-header">
+        <div class="gal-badge">
+          <i class="fas fa-images"></i> Gallery
+        </div>
+        <h1 class="gal-title">Project Showcase</h1>
+        <p class="gal-desc">Koleksi visual terbaik dari proyek-proyek yang telah saya selesaikan.</p>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gal-grid">
+
+        <!-- Card 1 -->
+        <div class="gal-card">
+          <div class="gal-scan-line"></div>
+          <div class="gal-img-wrap">
+            <img src="Project/Mitra.png" alt="TS Kost Website" loading="lazy"
+                 onerror="this.src='';this.closest('.gal-img-wrap').style.background='linear-gradient(135deg,#10b981,#0d9488)';this.style.display='none';">
+          </div>
+          <div class="gal-overlay">
+            <div class="gal-overlay-inner">
+              <h4>TS KOST Website</h4>
+              <span>Web Development</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="gal-card">
+          <div class="gal-scan-line"></div>
+          <div class="gal-img-wrap">
+            <img src="Project/Design.png" alt="Design Project" loading="lazy"
+                 onerror="this.src='';this.closest('.gal-img-wrap').style.background='linear-gradient(135deg,#f59e0b,#f97316)';this.style.display='none';">
+          </div>
+          <div class="gal-overlay">
+            <div class="gal-overlay-inner">
+              <h4>Design Project</h4>
+              <span>UI/UX Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="gal-card">
+          <div class="gal-scan-line"></div>
+          <div class="gal-img-wrap">
+            <img src="Project/Fostan.png" alt="Fostan Project" loading="lazy"
+                 onerror="this.src='';this.closest('.gal-img-wrap').style.background='linear-gradient(135deg,#818cf8,#6366f1)';this.style.display='none';">
+          </div>
+          <div class="gal-overlay">
+            <div class="gal-overlay-inner">
+              <h4>Fostan Project</h4>
+              <span>Graphic Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="gal-card">
+          <div class="gal-scan-line"></div>
+          <div class="gal-img-wrap">
+            <img src="Project/Sosial_Media.png" alt="Social Media Design" loading="lazy"
+                 onerror="this.src='';this.closest('.gal-img-wrap').style.background='linear-gradient(135deg,#ec4899,#a855f7)';this.style.display='none';">
+          </div>
+          <div class="gal-overlay">
+            <div class="gal-overlay-inner">
+              <h4>Social Media Kit</h4>
+              <span>Digital Branding</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /gal-grid -->
+    </div><!-- /container -->
+
+    <footer class="site-footer" style="border-color:rgba(217,70,239,0.15);">
+      <div class="footer-inner">
+        <span class="footer-text" style="color:#6d28d9;">© 2025 Muhammad Ibnu Akbar</span>
+        <span style="color:#d946ef;font-size:.82rem;font-weight:600;">
+          <i class="fas fa-wand-magic-sparkles" style="margin-right:6px;"></i>Creative Works
+        </span>
+      </div>
+    </footer>
+  </div><!-- /gallery-page -->
+
+
+  <!-- ══════════════════════════════════════
+       SOCIALS PAGE  🌸 Candy Bloom
+       ══════════════════════════════════════ -->
+  <div id="socials-page" class="page">
+    <div class="container">
+
+      <div class="soc-header">
+        <div class="soc-badge">
+          <i class="fas fa-paper-plane"></i> Connect
+        </div>
+        <h1 class="soc-title">Hubungi Saya</h1>
+        <p class="soc-desc">Punya proyek seru atau ingin diskusi? Reach out lewat platform favorit kamu!</p>
+      </div>
+
+      <!-- Social Cards -->
+      <div class="soc-cards">
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/ibnuakbar15/"
+           target="_blank" rel="noopener noreferrer"
+           class="soc-card linkedin">
+          <div class="soc-icon-wrap" style="background:linear-gradient(135deg,#0a66c2,#0077b5);">
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+          <div class="soc-card-name">LinkedIn</div>
+          <div class="soc-card-handle">Muhammad Ibnu Akbar</div>
+          <span class="soc-chip" style="background:#dbeafe;color:#1d4ed8;">
+            <i class="fab fa-linkedin-in" style="font-size:.8rem;"></i> Connect
+          </span>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com/ibnuakbar_4"
+           target="_blank" rel="noopener noreferrer"
+           class="soc-card instagram">
+          <div class="soc-icon-wrap" style="background:linear-gradient(135deg,#f97316,#ec4899,#6366f1);">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <div class="soc-card-name">Instagram</div>
+          <div class="soc-card-handle">@ibnuakbar_4</div>
+          <span class="soc-chip" style="background:#fce7f3;color:#be185d;">
+            <i class="fab fa-instagram" style="font-size:.8rem;"></i> Follow
+          </span>
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://tiktok.com/@ibnuakbar_15"
+           target="_blank" rel="noopener noreferrer"
+           class="soc-card tiktok">
+          <div class="soc-icon-wrap" style="background:#0f172a;position:relative;overflow:hidden;">
+            <i class="fab fa-tiktok" style="position:relative;z-index:1;"></i>
+            <!-- TikTok color echo -->
+            <div style="position:absolute;top:-5px;left:-5px;right:-5px;bottom:-5px;background:linear-gradient(135deg,rgba(105,201,255,0.3),rgba(254,44,85,0.3));border-radius:inherit;"></div>
+          </div>
+          <div class="soc-card-name">TikTok</div>
+          <div class="soc-card-handle">@ibnuakbar_15</div>
+          <span class="soc-chip" style="background:#f1f5f9;color:#475569;">
+            <i class="fab fa-tiktok" style="font-size:.8rem;"></i> Follow
+          </span>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/6285835695375"
+           target="_blank" rel="noopener noreferrer"
+           class="soc-card whatsapp">
+          <div class="soc-icon-wrap" style="background:linear-gradient(135deg,#25d366,#128c7e);">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <div class="soc-card-name">WhatsApp</div>
+          <div class="soc-card-handle">+62 858-3569-5375</div>
+          <span class="soc-chip" style="background:#dcfce7;color:#15803d;">
+            <i class="fab fa-whatsapp" style="font-size:.8rem;"></i> Chat
+          </span>
+        </a>
+
+      </div><!-- /soc-cards -->
+
+      <!-- CV Download Banner -->
+      <div class="cv-banner">
+        <div class="cv-banner-left">
+          <h3><i class="fas fa-file-pdf" style="color:#ec4899;margin-right:10px;"></i>Curriculum Vitae</h3>
+          <p>Download CV lengkap saya dalam format PDF — siap untuk referensi atau rekrutmen.</p>
+        </div>
+        <a href="cv/Ibnu_Akbar_CV.pdf" download="CV_Muhammad_Ibnu_Akbar.pdf" class="btn-download-cv">
+          <i class="fas fa-download"></i>
+          Download CV
+        </a>
+      </div>
+
+      <div class="soc-footer">
+        <p><i class="fas fa-heart" style="color:#ec4899;margin-right:6px;"></i>Terima kasih telah mengunjungi portofolio saya!</p>
+      </div>
+
+    </div><!-- /container -->
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span class="footer-text">© 2025 Muhammad Ibnu Akbar. All rights reserved.</span>
+        <span style="color:#ec4899;font-size:.82rem;font-weight:600;">
+          <i class="fas fa-heart" style="margin-right:6px;"></i>Made with Love
+        </span>
+      </div>
+    </footer>
+  </div><!-- /socials-page -->
+
+
+  <!-- Script -->
+  <script src="script.js"></script>
+
+  <!-- Extra inline styles for nav logo accent per theme -->
+  <style>
+    .theme-home       #logo-accent { color: #f97316; }
+    .theme-pengalaman #logo-accent { color: #06b6d4; }
+    .theme-gallery    #logo-accent { color: #d946ef; }
+    .theme-socials    #logo-accent { color: #ec4899; }
+
+    .theme-pengalaman .nav-logo,
+    .theme-gallery    .nav-logo { color: white; }
+    .theme-home       .nav-logo,
+    .theme-socials    .nav-logo { color: #1c1917; }
+  </style>
+
+</body>
+</html>

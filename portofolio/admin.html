@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-admin">
+  <div id="admin-page" class="page admin-page">
+    <div class="container">
+      <header class="admin-header">
+        <div>
+          <p class="home-badge" style="background:rgba(99,102,241,0.1);border-color:rgba(99,102,241,0.2);color:#4338ca;">
+            <span class="badge-dot"></span>
+            Admin Dashboard
+          </p>
+          <h1 class="home-title" style="margin-top:12px;">Kontrol Konten Website</h1>
+          <p class="home-desc" style="max-width:720px;">
+            Tambah, edit, atau hapus konten halaman utama tanpa menyentuh kode. Semua perubahan disimpan secara lokal di browser Anda.
+          </p>
+        </div>
+        <div class="admin-actions">
+          <button id="reset-default-btn" class="btn-secondary">Reset ke Default</button>
+          <button id="clear-storage-btn" class="btn-secondary">Hapus Data Lokal</button>
+          <a href="index.html" class="btn-primary" style="margin-left:0;">Lihat Website</a>
+        </div>
+      </header>
+
+      <section class="admin-section">
+        <div class="admin-section-head">
+          <div>
+            <h2>Kelola Pengalaman</h2>
+            <p>Tambahkan pengalaman baru atau edit konten yang sudah ada.</p>
+          </div>
+        </div>
+
+        <div class="admin-flex">
+          <div class="admin-form-panel">
+            <h3 id="exp-form-title">Tambah Pengalaman Baru</h3>
+            <form id="exp-form" class="admin-form">
+              <input type="hidden" id="exp-id" value="">
+              <label>Judul</label>
+              <input id="exp-title" type="text" required>
+              <label>Deskripsi</label>
+              <textarea id="exp-description" rows="4" required></textarea>
+              <label>Kategori</label>
+              <input id="exp-category" list="exp-category-list" required>
+              <datalist id="exp-category-list">
+                <option value="Software & Web Development">
+                <option value="UI/UX & Graphic Design">
+                <option value="Digital Branding & Social Media">
+                <option value="Pengalaman Organisasi">
+              </datalist>
+              <label>Label Pendek</label>
+              <input id="exp-tagText" type="text" placeholder="Live & Online / Logic Success">
+              <label>Warna Label</label>
+              <input id="exp-tagColor" type="color" value="#1f2937">
+              <label>Warna Latar Label</label>
+              <input id="exp-tagBg" type="text" value="rgba(249,115,22,0.15)">
+              <label>Icon CSS</label>
+              <input id="exp-icon" type="text" placeholder="fas fa-briefcase">
+              <label>Link (opsional)</label>
+              <input id="exp-link" type="url" placeholder="https://">
+              <label>Gradient Card</label>
+              <input id="exp-gradient" type="text" placeholder="linear-gradient(135deg,#10b981,#0d9488)">
+              <button type="submit" class="btn-primary">Simpan Pengalaman</button>
+            </form>
+          </div>
+
+          <div class="admin-list-panel">
+            <h3>Daftar Pengalaman</h3>
+            <div id="admin-exp-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-section">
+        <div class="admin-section-head">
+          <div>
+            <h2>Kelola Gallery</h2>
+            <p>Tambahkan atau hapus kartu gallery langsung dari dashboard.</p>
+          </div>
+        </div>
+
+        <div class="admin-flex">
+          <div class="admin-form-panel">
+            <h3 id="gal-form-title">Tambah Item Gallery</h3>
+            <form id="gal-form" class="admin-form">
+              <input type="hidden" id="gal-id" value="">
+              <label>Judul</label>
+              <input id="gal-title" type="text" required>
+              <label>Subjudul</label>
+              <input id="gal-subtitle" type="text" required>
+              <label>Path Gambar</label>
+              <input id="gal-image" type="text" required placeholder="Project/NamaGambar.png">
+              <label>Alt Text</label>
+              <input id="gal-alt" type="text" required placeholder="Deskripsi gambar">
+              <label>Gradient Placeholder</label>
+              <input id="gal-gradient" type="text" placeholder="linear-gradient(135deg,#10b981,#0d9488)">
+              <button type="submit" class="btn-primary">Simpan Gallery</button>
+            </form>
+          </div>
+
+          <div class="admin-list-panel">
+            <h3>Daftar Gallery</h3>
+            <div id="admin-gal-list"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
